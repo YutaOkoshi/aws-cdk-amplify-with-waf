@@ -74,7 +74,7 @@ class CustomAmplifyDistributionStack(Stack):
             self,
             "rAmplifyCredentialsRetrievalFunction",
             description="custom function to retrieve value of scecrets that contain amplify auth info",  # noqa 501
-            runtime=Runtime.PYTHON_3_9,
+            runtime=Runtime.PYTHON_3_12,
             handler="lambda_function.lambda_handler",
             code=Code.from_asset(
                 path=os.path.join(dirname, "functions/password_retrieval")
@@ -207,7 +207,7 @@ class CustomAmplifyDistributionStack(Stack):
             self,
             "rCacheInvalidationFunction",
             description="custom function to trigger cloudfront cache invalidation",  # noqa 501
-            runtime=Runtime.PYTHON_3_9,
+            runtime=Runtime.PYTHON_3_12,
             handler="lambda_function.lambda_handler",
             code=Code.from_asset(
                 path=os.path.join(dirname, "functions/cache_invalidation")
